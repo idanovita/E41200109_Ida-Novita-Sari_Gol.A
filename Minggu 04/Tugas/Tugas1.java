@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package Tugas_Statement;
-
-import javax.swing.JOptionPane;
-
+import java.util.Scanner;
 /**
  *
  * @author user
@@ -18,14 +16,15 @@ public class Tugas1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String awal = JOptionPane.showInputDialog("Masukkan Batas Nilai Awal) =");
-        String akhir = JOptionPane.showInputDialog("Masukkan Batas Nilai Akhir) =");
+        Scanner in = new Scanner(System.in);
         
-        int genap = Integer.parseInt(awal);
-        int genapi = Integer.parseInt(akhir);
+        System.out.print("Masukkan Batas Nilai Awal = ");
+        int awal = in.nextInt();
+        System.out.print("Masukkan Batas Nilai Akhir = ");
+        int akhir = in.nextInt();
         
-        for (int i = 1; i <= 20; i++)
-            if (i% 2 == 0) {
+        for (int i = awal; i <= akhir; i++)
+            if (i % 2 == 0) {
                 System.out.print(i + " ");
             }
     }
